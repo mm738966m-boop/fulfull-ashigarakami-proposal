@@ -71,11 +71,13 @@
   }
   .hero-band::after {
     content: ""; position: absolute; inset: 0;
-    background:
-      linear-gradient(90deg, rgba(4,22,19,.85) 0%, rgba(4,22,19,.66) 55%, rgba(4,22,19,.52) 100%),
-      linear-gradient(180deg, rgba(6,30,26,.55) 0%, rgba(6,30,26,.62) 45%, rgba(7,38,34,.90) 100%);
+    background: linear-gradient(180deg, rgba(8,40,36,.30) 0%, rgba(8,40,36,.38) 55%, rgba(8,44,40,.66) 100%);
   }
   .hero-inner { position: relative; z-index: 1; padding: clamp(46px,9vw,88px) 0 clamp(38px,7vw,62px); }
+  .hero-inner::before {
+    content: ""; position: absolute; top: 0; bottom: 0; left: -48px; right: -48px; z-index: -1;
+    background: linear-gradient(90deg, rgba(2,16,14,.80) 0%, rgba(2,16,14,.66) 44%, rgba(2,16,14,.30) 70%, rgba(2,16,14,0) 90%);
+  }
   .hero-inner .doc-kicker {
     background: rgba(255,255,255,.13); border-color: rgba(255,255,255,.30);
     color: #eafaf7; box-shadow: none; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
@@ -662,7 +664,7 @@
 </main>
 
 <footer>
-  fulfull株式会社 ｜ 足柄上商工会様向け「お金の勉強会」開催のご提案（企画書たたき台 rev.14）
+  fulfull株式会社 ｜ 足柄上商工会様向け「お金の勉強会」開催のご提案（企画書たたき台 rev.15）
 </footer>
 </body>
 </html>
