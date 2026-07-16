@@ -1,3 +1,9 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="fulfull株式会社から足柄上商工会様への「お金の勉強会」開催のご提案">
 <title>足柄上商工会様向け「お金の勉強会」開催のご提案｜fulfull株式会社</title>
 <style>
   :root {
@@ -56,22 +62,27 @@
   .wrap { max-width: 880px; margin: 0 auto; padding: 0 26px; }
 
   /* ---------- Cover ---------- */
-  .cover {
-    position: relative; padding: 92px 0 66px; overflow: hidden;
-    background:
-      radial-gradient(120% 90% at 88% -10%, var(--teal-wash) 0%, transparent 55%),
-      linear-gradient(180deg, var(--panel) 0%, var(--ground) 100%);
-    border-bottom: 1px solid var(--line);
-  }
-  .cover::before {
+  .cover { position: relative; border-bottom: 1px solid var(--line); }
+  .hero-band { position: relative; background: #0b2a25; overflow: hidden; }
+  .hero-band::before {
     content: ""; position: absolute; inset: 0;
-    background-image: radial-gradient(var(--line) 1px, transparent 1px);
-    background-size: 22px 22px;
-    -webkit-mask-image: linear-gradient(180deg, transparent, #000 40%, transparent 92%);
-            mask-image: linear-gradient(180deg, transparent, #000 40%, transparent 92%);
-    opacity: .5; pointer-events: none;
+    background: url('images/hero.jpg') center 32% / cover no-repeat;
+    transform: scale(1.03);
   }
-  .cover .wrap { position: relative; }
+  .hero-band::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(8,40,36,.60) 0%, rgba(8,40,36,.70) 50%, rgba(9,46,42,.94) 100%);
+  }
+  .hero-inner { position: relative; z-index: 1; padding: clamp(46px,9vw,88px) 0 clamp(38px,7vw,62px); }
+  .hero-inner .doc-kicker {
+    background: rgba(255,255,255,.13); border-color: rgba(255,255,255,.30);
+    color: #eafaf7; box-shadow: none; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  }
+  .hero-inner h1 { color: #fff; }
+  .hero-inner h1 .accent { background: linear-gradient(transparent 62%, rgba(199,154,75,.55) 62%); }
+  .hero-inner .lead { color: #d4ece7; }
+  .cover-parties { background: var(--panel); padding: clamp(22px,4vw,32px) 0 clamp(38px,6vw,52px); }
+  .cover-parties .parties { margin-top: 0; }
   .doc-kicker {
     display: inline-flex; align-items: center; gap: 9px;
     font-size: 12px; letter-spacing: .16em; font-weight: 700;
@@ -128,8 +139,9 @@
   .company-card dd { margin: 0; font-size: 14px; color: var(--ink-soft); }
   .vision { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--line); font-family: var(--serif); font-size: 16px; color: var(--ink); }
 
-  .lecturer { display: grid; grid-template-columns: 88px 1fr; gap: 20px; align-items: center; background: var(--ground); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; box-shadow: var(--shadow); }
-  .lecturer .avatar { width: 88px; height: 88px; border-radius: 50%; background: linear-gradient(140deg, var(--teal), var(--teal-bright)); display: grid; place-items: center; color: #fff; font-family: var(--serif); font-size: 34px; font-weight: 600; box-shadow: var(--shadow); }
+  .lecturer { display: grid; grid-template-columns: 96px 1fr; gap: 20px; align-items: center; background: var(--ground); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; box-shadow: var(--shadow); }
+  .lecturer .avatar { width: 96px; height: 96px; border-radius: 50%; overflow: hidden; box-shadow: var(--shadow); border: 2px solid var(--ground); flex: 0 0 96px; }
+  .lecturer .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .lecturer .l-role { font-size: 11px; letter-spacing: .12em; font-weight: 700; color: var(--teal); text-transform: uppercase; }
   .lecturer .l-name { font-family: var(--serif); font-size: 22px; font-weight: 600; margin: 3px 0 2px; }
   .lecturer .l-name span { font-size: 13px; color: var(--ink-faint); font-family: var(--gothic); margin-left: 8px; }
@@ -162,9 +174,18 @@
   .stat .label { font-size: 11.5px; color: var(--ink-soft); margin-top: 9px; letter-spacing: .01em; line-height: 1.5; }
 
   .partners { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-  .partner { background: var(--ground); border: 1px solid var(--line); border-radius: 13px; padding: 18px 18px; box-shadow: var(--shadow); }
+  .partner { background: var(--ground); border: 1px solid var(--line); border-radius: 13px; overflow: hidden; box-shadow: var(--shadow); }
+  .partner img { display: block; width: 100%; height: 128px; object-fit: cover; border-bottom: 1px solid var(--line); }
+  .partner .p-body { padding: 15px 17px 17px; }
   .partner .p-ttl { font-size: 14px; font-weight: 700; color: var(--teal-deep); margin-bottom: 6px; }
   .partner .p-txt { font-size: 12.5px; color: var(--ink-soft); }
+
+  /* ---------- Photo gallery ---------- */
+  .gallery-h { font-family: var(--serif); font-size: 18px; font-weight: 600; margin: 36px 0 4px; }
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
+  .gallery figure { margin: 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--panel); }
+  .gallery img { display: block; width: 100%; height: 172px; object-fit: cover; }
+  .gallery figcaption { font-size: 11.5px; color: var(--ink-soft); padding: 8px 12px; }
 
   /* ---------- Merit cards ---------- */
   .merits { display: grid; gap: 16px; }
@@ -235,6 +256,9 @@
     .partners { grid-template-columns: 1fr; }
     .field-grid { grid-template-columns: 1fr; }
     .voices { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: 1fr 1fr; }
+    .gallery img { height: 128px; }
+    .partner img { height: 150px; }
     .spec-row { grid-template-columns: 104px 1fr; }
     .merit { grid-template-columns: 36px 1fr; gap: 12px; }
     .closing { padding: 36px 24px; }
@@ -245,13 +269,18 @@
     .flow-step:not(:last-child)::after { display: none; }
   }
 </style>
-
+</head>
+<body>
 <header class="cover">
-  <div class="wrap">
-    <span class="doc-kicker"><span class="dot"></span>企画提案書</span>
-    <h1>足柄上商工会様向け<br><span class="accent">「お金の勉強会」</span>開催のご提案</h1>
-    <p class="lead">物価高騰と将来不安の時代に、会員企業様の経営支援・従業員様の福利厚生として。知識ゼロから学べる、家族で育つお金の教育プログラムをご提案いたします。</p>
-
+  <div class="hero-band">
+    <div class="wrap hero-inner">
+      <span class="doc-kicker"><span class="dot"></span>企画提案書</span>
+      <h1>足柄上商工会様向け<br><span class="accent">「お金の勉強会」</span>開催のご提案</h1>
+      <p class="lead">物価高騰と将来不安の時代に、会員企業様の経営支援・従業員様の福利厚生として。知識ゼロから学べる、家族で育つお金の教育プログラムをご提案いたします。</p>
+    </div>
+  </div>
+  <div class="cover-parties">
+   <div class="wrap">
     <div class="parties">
       <div class="party">
         <div class="role">ご提案元</div>
@@ -264,6 +293,7 @@
         <div class="sub">会員企業の経営者様・従業員様へ</div>
       </div>
     </div>
+   </div>
   </div>
 </header>
 
@@ -296,7 +326,7 @@
       </div>
 
       <div class="lecturer">
-        <div class="avatar">森</div>
+        <div class="avatar"><img src="images/lecturer.jpg" alt="fulfull株式会社 代表取締役 森川満章"></div>
         <div>
           <div class="l-role">講師｜代表取締役</div>
           <div class="l-name">森川 満章<span>投資の先生</span></div>
@@ -383,17 +413,36 @@
     <p style="margin-top:6px;">また、公的団体・教育機関・メディア企業など、多様なパートナーとの連携実績がございます。</p>
     <div class="partners">
       <div class="partner">
-        <div class="p-ttl">商工会議所との連携</div>
-        <div class="p-txt">起業塾・ビジネスアドバイザーとしてセミナーを共催。公的団体での登壇に慣れています。</div>
+        <img src="images/biz-card.jpg" alt="商工会議所でのビジネスセミナーの様子">
+        <div class="p-body">
+          <div class="p-ttl">商工会議所との連携</div>
+          <div class="p-txt">起業塾・ビジネスアドバイザーとしてセミナーを共催。公的団体での登壇に慣れています。</div>
+        </div>
       </div>
       <div class="partner">
-        <div class="p-ttl">教育機関とのタイアップ</div>
-        <div class="p-txt">親子プログラミング大会、キッズマネースクールなど、次世代教育のプログラムを展開。</div>
+        <img src="images/education.jpg" alt="親子・キッズマネースクールの様子">
+        <div class="p-body">
+          <div class="p-ttl">教育機関とのタイアップ</div>
+          <div class="p-txt">親子プログラミング大会、キッズマネースクールなど、次世代教育のプログラムを展開。</div>
+        </div>
       </div>
       <div class="partner">
-        <div class="p-ttl">メディア企業との連携</div>
-        <div class="p-txt">SNSを活用したライブ配信イベントや広告プロモーションを共同で実施。</div>
+        <img src="images/voicy.jpg" alt="Voicyイベントでの登壇">
+        <div class="p-body">
+          <div class="p-ttl">メディア企業との連携</div>
+          <div class="p-txt">SNSを活用したライブ配信イベントや広告プロモーションを共同で実施。</div>
+        </div>
       </div>
+    </div>
+
+    <h3 class="gallery-h">開催の様子</h3>
+    <div class="gallery">
+      <figure><img src="images/speaking.jpg" alt="登壇する森川講師"><figcaption>代表・森川による登壇</figcaption></figure>
+      <figure><img src="images/discussion.jpg" alt="少人数での対話・グループワーク"><figcaption>少人数の対話形式で学ぶ</figcaption></figure>
+      <figure><img src="images/participant.jpg" alt="発言する参加者"><figcaption>参加者も主役になる場</figcaption></figure>
+      <figure><img src="images/group.jpg" alt="受講生の集合写真"><figcaption>世代を超えて集う受講生</figcaption></figure>
+      <figure><img src="images/networking.jpg" alt="受講生同士の交流"><figcaption>学び合える仲間との交流</figcaption></figure>
+      <figure><img src="images/community.jpg" alt="勉強会の集合写真"><figcaption>温かいコミュニティ</figcaption></figure>
     </div>
   </section>
 
@@ -535,5 +584,7 @@
 </main>
 
 <footer>
-  fulfull株式会社 ｜ 足柄上商工会様向け「お金の勉強会」開催のご提案（企画書たたき台 rev.5）
+  fulfull株式会社 ｜ 足柄上商工会様向け「お金の勉強会」開催のご提案（企画書たたき台 rev.6）
 </footer>
+</body>
+</html>
