@@ -223,6 +223,12 @@
   .outcome .o-k::before { content: ""; position: absolute; left: 0; top: 3px; bottom: 1px; width: 4px; border-radius: 3px; background: var(--gold); }
   .outcome .o-v { font-size: 13px; color: var(--ink-soft); }
   .case-note { margin-top: 16px; font-size: 12px; color: var(--ink-faint); }
+  .more-h { font-family: var(--serif); font-size: 16px; font-weight: 600; margin: 30px 0 2px; }
+  .credits { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .credit { display: flex; gap: 13px; background: var(--ground); border: 1px solid var(--line); border-radius: 12px; padding: 15px 16px; box-shadow: var(--shadow); }
+  .credit .ci { flex: 0 0 auto; width: 34px; height: 34px; border-radius: 9px; background: var(--teal-wash); color: var(--teal-deep); display: grid; place-items: center; font-size: 15px; font-weight: 700; }
+  .credit .cn { font-size: 14px; font-weight: 700; color: var(--ink); line-height: 1.5; }
+  .credit .cd { font-size: 12.5px; color: var(--ink-soft); margin-top: 3px; }
 
   /* ---------- Voices ---------- */
   .voices { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
@@ -276,6 +282,7 @@
     .partner img { height: 150px; }
     .case-layout { grid-template-columns: 1fr; gap: 16px; }
     .case-outcomes { grid-template-columns: 1fr; }
+    .credits { grid-template-columns: 1fr; }
     .spec-row { grid-template-columns: 104px 1fr; }
     .merit { grid-template-columns: 36px 1fr; gap: 12px; }
     .closing { padding: 36px 24px; }
@@ -352,7 +359,7 @@
             <span class="l-tag">ビジネスお助け隊 役員</span>
             <span class="l-tag">創業塾 役員</span>
             <span class="l-tag">Voicy「ふるふるラジオ」再生65万回超</span>
-            <span class="l-tag">受講者累計2,000名超</span>
+            <span class="l-tag">累計相談2,000件超</span>
           </div>
         </div>
       </div>
@@ -421,10 +428,10 @@
       <h2><span class="en">Track record</span>実績と、信頼の数字</h2>
     </div>
     <div class="stats">
-      <div class="stat"><div class="figure">2,000<span class="unit">名超</span></div><div class="label">累計受講者数</div></div>
-      <div class="stat"><div class="figure">200<span class="unit">本/年</span></div><div class="label">個人向けマネー<br>セミナー（オンライン）</div></div>
-      <div class="stat"><div class="figure">役員<span class="unit"></span></div><div class="label">ビジネスお助け隊<br>／創業塾 役員</div></div>
-      <div class="stat"><div class="figure">65<span class="unit">万回超</span></div><div class="label">Voicy番組<br>累計再生数</div></div>
+      <div class="stat"><div class="figure">6,500<span class="unit">名超</span></div><div class="label">セミナー<br>延べ参加者数</div></div>
+      <div class="stat"><div class="figure">25<span class="unit">社超</span></div><div class="label">企業向け研修<br>導入実績</div></div>
+      <div class="stat"><div class="figure">12<span class="unit">件超</span></div><div class="label">行政・団体との<br>連携実績</div></div>
+      <div class="stat"><div class="figure">92<span class="unit">%</span></div><div class="label">受講者の<br>継続率</div></div>
     </div>
 
     <p style="margin-top:6px;">また、公的団体・教育機関・メディア企業など、多様なパートナーとの連携実績がございます。</p>
@@ -529,6 +536,39 @@
           <div class="o-v">受講をきっかけに、自社内での単独開催や、従業員の個別相談へのご相談につながっています。</div>
         </div>
       </div>
+
+      <h4 class="more-h">その他の主な開催・協業実績</h4>
+      <div class="credits">
+        <div class="credit">
+          <div class="ci">◆</div>
+          <div>
+            <div class="cn">平塚ロータスクラブ様</div>
+            <div class="cd">自動車整備工場オーナー向け「経営者の資産運用」セミナー</div>
+          </div>
+        </div>
+        <div class="credit">
+          <div class="ci">◆</div>
+          <div>
+            <div class="cn">各地の商工会議所・行政</div>
+            <div class="cd">起業塾に役員として参画、経営者向けセミナーを共催</div>
+          </div>
+        </div>
+        <div class="credit">
+          <div class="ci">◆</div>
+          <div>
+            <div class="cn">積水ハウス様</div>
+            <div class="cd">不動産オーナー向け 資産運用セミナーに登壇</div>
+          </div>
+        </div>
+        <div class="credit">
+          <div class="ci">◆</div>
+          <div>
+            <div class="cn">東京海上日動あんしん生命様</div>
+            <div class="cd">企業の従業員向け マネーセミナーに登壇</div>
+          </div>
+        </div>
+      </div>
+
       <p class="case-note">※ 開催時期・参加人数・アンケート満足度などの具体的な数値、当日の写真・参加者アンケートは、お手元の資料をもとにご記入・差し替えのうえご使用ください。数値やグラフを添えると、より訴求力が高まります。</p>
     </div>
   </section>
@@ -613,7 +653,7 @@
 </main>
 
 <footer>
-  fulfull株式会社 ｜ 足柄上商工会様向け「お金の勉強会」開催のご提案（企画書たたき台 rev.7）
+  fulfull株式会社 ｜ 足柄上商工会様向け「お金の勉強会」開催のご提案（企画書たたき台 rev.8）
 </footer>
 </body>
 </html>
