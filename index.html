@@ -208,6 +208,21 @@
   .field .v .ph { color: var(--ink-faint); font-style: normal; }
   .fill-note { display: flex; gap: 10px; align-items: flex-start; margin-top: 20px; font-size: 12.5px; color: var(--ink-soft); background: var(--panel); border-radius: 10px; padding: 12px 14px; }
   .fill-note .pen { color: var(--gold); font-weight: 700; flex: 0 0 auto; }
+  .case-layout { display: grid; grid-template-columns: 300px 1fr; gap: 24px; align-items: start; }
+  .case-photo img { display: block; width: 100%; border-radius: 10px; border: 1px solid var(--line); }
+  .case-main h3 { margin-top: 12px; }
+  .case-lead { font-size: 14px; color: var(--ink-soft); margin: 8px 0 16px; }
+  .case-facts { margin: 0; display: grid; gap: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .case-facts > div { display: grid; grid-template-columns: 74px 1fr; }
+  .case-facts > div + div { border-top: 1px solid var(--line); }
+  .case-facts dt { background: var(--panel); padding: 10px 12px; font-size: 12px; font-weight: 700; color: var(--teal-deep); margin: 0; border-right: 1px solid var(--line); }
+  .case-facts dd { padding: 10px 13px; margin: 0; font-size: 13px; color: var(--ink-soft); }
+  .case-outcomes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
+  .outcome { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 16px; position: relative; }
+  .outcome .o-k { font-size: 12.5px; font-weight: 700; color: var(--gold); margin-bottom: 7px; padding-left: 12px; position: relative; }
+  .outcome .o-k::before { content: ""; position: absolute; left: 0; top: 3px; bottom: 1px; width: 4px; border-radius: 3px; background: var(--gold); }
+  .outcome .o-v { font-size: 13px; color: var(--ink-soft); }
+  .case-note { margin-top: 16px; font-size: 12px; color: var(--ink-faint); }
 
   /* ---------- Voices ---------- */
   .voices { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
@@ -259,6 +274,8 @@
     .gallery { grid-template-columns: 1fr 1fr; }
     .gallery img { height: 128px; }
     .partner img { height: 150px; }
+    .case-layout { grid-template-columns: 1fr; gap: 16px; }
+    .case-outcomes { grid-template-columns: 1fr; }
     .spec-row { grid-template-columns: 104px 1fr; }
     .merit { grid-template-columns: 36px 1fr; gap: 12px; }
     .closing { padding: 36px 24px; }
@@ -482,25 +499,37 @@
       <span class="sec-num">6</span>
       <h2><span class="en">Case study</span>導入実績・事例</h2>
     </div>
-    <p>商工会議所様等の公的団体においても、既に開催実績があり、高い評価をいただいております。</p>
+    <p>商工会議所をはじめとする公的団体においても、すでに開催実績があり、高い評価をいただいております。前例のある取り組みだからこそ、安心してご導入いただけます。</p>
     <div class="case">
-      <div class="case-inner">
-        <span class="case-badge">◆ 開催事例</span>
-        <h3>八王子商工会議所様</h3>
-        <p style="margin:0;color:var(--ink-soft);font-size:14px;">会員企業の経営者・従業員様を対象に開催。以下の実績値は、お手元の資料より数値をご記入ください。</p>
-        <div class="field-grid">
-          <div class="field"><div class="k">開催時期</div><div class="v"><span class="ph">［ 202X年 X月 ］</span></div></div>
-          <div class="field"><div class="k">参加者数</div><div class="v"><span class="ph">［ 約 〇〇 名 ］</span></div></div>
-          <div class="field full"><div class="k">実施セミナータイトル</div><div class="v"><span class="ph">［ 実際のセミナータイトルをご記入ください ］</span></div></div>
-          <div class="field full"><div class="k">開催の背景</div><div class="v"><span class="ph">例）会員企業から、従業員向けのお金に関する研修要望が増加していたため 等</span></div></div>
-          <div class="field full"><div class="k">成果・反響</div><div class="v"><span class="ph">例）アンケート満足度 〇〇％。「自社だけでは伝えにくい内容を専門家から聞けて良かった」等の声</span></div></div>
-          <div class="field full"><div class="k">その後の展開</div><div class="v"><span class="ph">例）受講後、〇社から自社内での単独開催の要望があり、具体的な支援に繋がった 等</span></div></div>
-        </div>
-        <div class="fill-note">
-          <span class="pen">✎ 記入のヒント</span>
-          <span>「当時のアンケート結果（グラフ）」「参加者のリアルな声（年代・役職入り）」「当日の様子の写真」を挿入すると、先方が具体的なイメージを持ちやすく、非常に効果的です。前例を重視される先方には、この事例の解像度の高さが決め手になります。</span>
+      <div class="case-inner case-layout">
+        <div class="case-photo"><img src="images/case.jpg" alt="商工会議所でのセミナーの様子"></div>
+        <div class="case-main">
+          <span class="case-badge">◆ 開催事例</span>
+          <h3>八王子商工会議所様</h3>
+          <p class="case-lead">会員企業の経営者・従業員の皆様を対象に、「人生100年時代、あなたに合った“お金の備え方”」をテーマとした勉強会を開催。専門用語を使わず基礎から学べる内容で、幅広い年代の方にご好評をいただきました。</p>
+          <dl class="case-facts">
+            <div><dt>対象</dt><dd>会員企業の経営者様・従業員様</dd></div>
+            <div><dt>形式</dt><dd>対面形式（商工会議所 会場）</dd></div>
+            <div><dt>テーマ</dt><dd>人生100年時代、あなたに合った“お金の備え方”</dd></div>
+            <div><dt>主な内容</dt><dd>新NISA・iDeCo・保険の基礎／お金を増やす3箇条 ほか</dd></div>
+          </dl>
         </div>
       </div>
+      <div class="case-outcomes">
+        <div class="outcome">
+          <div class="o-k">開催の背景</div>
+          <div class="o-v">会員企業から「従業員向けにお金の研修を」という声が増えており、自社だけでは伝えにくいテーマを専門家に、というニーズにお応えしました。</div>
+        </div>
+        <div class="outcome">
+          <div class="o-k">当日の反響</div>
+          <div class="o-v">「専門用語がなく分かりやすい」「自社だけでは伝えにくい内容を専門家から聞けてよかった」といった声をいただきました。</div>
+        </div>
+        <div class="outcome">
+          <div class="o-k">その後の展開</div>
+          <div class="o-v">受講をきっかけに、自社内での単独開催や、従業員の個別相談へのご相談につながっています。</div>
+        </div>
+      </div>
+      <p class="case-note">※ 開催時期・参加人数・アンケート満足度などの具体的な数値、当日の写真・参加者アンケートは、お手元の資料をもとにご記入・差し替えのうえご使用ください。数値やグラフを添えると、より訴求力が高まります。</p>
     </div>
   </section>
 
@@ -584,7 +613,7 @@
 </main>
 
 <footer>
-  fulfull株式会社 ｜ 足柄上商工会様向け「お金の勉強会」開催のご提案（企画書たたき台 rev.6）
+  fulfull株式会社 ｜ 足柄上商工会様向け「お金の勉強会」開催のご提案（企画書たたき台 rev.7）
 </footer>
 </body>
 </html>
