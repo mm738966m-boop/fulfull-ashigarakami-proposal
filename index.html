@@ -1,0 +1,539 @@
+<title>足柄上商工会様向け「お金の勉強会」開催のご提案｜fulfull株式会社</title>
+<style>
+  :root {
+    --ground: #ffffff;
+    --panel: #f4f8f6;
+    --panel-2: #eef4f1;
+    --ink: #16302c;
+    --ink-soft: #4a615c;
+    --ink-faint: #7c908b;
+    --line: #dde7e3;
+    --teal: #0e7c6e;
+    --teal-deep: #0a5a50;
+    --teal-bright: #17a294;
+    --teal-wash: #e4f1ee;
+    --gold: #c79a4b;
+    --gold-wash: #f7efdd;
+    --shadow: 0 1px 2px rgba(16,48,44,.04), 0 8px 28px rgba(16,48,44,.06);
+    --shadow-lift: 0 2px 6px rgba(16,48,44,.06), 0 18px 44px rgba(16,48,44,.10);
+    --serif: "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+    --gothic: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", "Meiryo", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0e1918; --panel: #142523; --panel-2: #17302c;
+      --ink: #e8f1ee; --ink-soft: #a9bfb9; --ink-faint: #7a938c; --line: #26403b;
+      --teal: #35b7a6; --teal-deep: #6fd6c7; --teal-bright: #46cbb9; --teal-wash: #16302c;
+      --gold: #d9b467; --gold-wash: #2a2417;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.4);
+      --shadow-lift: 0 2px 6px rgba(0,0,0,.35), 0 18px 44px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0e1918; --panel: #142523; --panel-2: #17302c;
+    --ink: #e8f1ee; --ink-soft: #a9bfb9; --ink-faint: #7a938c; --line: #26403b;
+    --teal: #35b7a6; --teal-deep: #6fd6c7; --teal-bright: #46cbb9; --teal-wash: #16302c;
+    --gold: #d9b467; --gold-wash: #2a2417;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.4);
+    --shadow-lift: 0 2px 6px rgba(0,0,0,.35), 0 18px 44px rgba(0,0,0,.5);
+  }
+  :root[data-theme="light"] {
+    --ground: #ffffff; --panel: #f4f8f6; --panel-2: #eef4f1;
+    --ink: #16302c; --ink-soft: #4a615c; --ink-faint: #7c908b; --line: #dde7e3;
+    --teal: #0e7c6e; --teal-deep: #0a5a50; --teal-bright: #17a294; --teal-wash: #e4f1ee;
+    --gold: #c79a4b; --gold-wash: #f7efdd;
+    --shadow: 0 1px 2px rgba(16,48,44,.04), 0 8px 28px rgba(16,48,44,.06);
+    --shadow-lift: 0 2px 6px rgba(16,48,44,.06), 0 18px 44px rgba(16,48,44,.10);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--ground); color: var(--ink);
+    font-family: var(--gothic); line-height: 1.9;
+    font-feature-settings: "palt" 1;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 26px; }
+
+  /* ---------- Cover ---------- */
+  .cover {
+    position: relative; padding: 92px 0 66px; overflow: hidden;
+    background:
+      radial-gradient(120% 90% at 88% -10%, var(--teal-wash) 0%, transparent 55%),
+      linear-gradient(180deg, var(--panel) 0%, var(--ground) 100%);
+    border-bottom: 1px solid var(--line);
+  }
+  .cover::before {
+    content: ""; position: absolute; inset: 0;
+    background-image: radial-gradient(var(--line) 1px, transparent 1px);
+    background-size: 22px 22px;
+    -webkit-mask-image: linear-gradient(180deg, transparent, #000 40%, transparent 92%);
+            mask-image: linear-gradient(180deg, transparent, #000 40%, transparent 92%);
+    opacity: .5; pointer-events: none;
+  }
+  .cover .wrap { position: relative; }
+  .doc-kicker {
+    display: inline-flex; align-items: center; gap: 9px;
+    font-size: 12px; letter-spacing: .16em; font-weight: 700;
+    color: var(--teal-deep); text-transform: uppercase;
+    background: var(--ground); border: 1px solid var(--line);
+    padding: 7px 14px; border-radius: 999px; box-shadow: var(--shadow);
+  }
+  .doc-kicker .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+  .cover h1 {
+    font-family: var(--serif); font-size: clamp(28px, 5.4vw, 46px);
+    line-height: 1.34; letter-spacing: .01em; font-weight: 600;
+    margin: 26px 0 0; text-wrap: balance;
+  }
+  .cover h1 .accent { background: linear-gradient(transparent 62%, var(--gold-wash) 62%); padding: 0 .05em; }
+  .cover .lead { font-size: 16px; color: var(--ink-soft); margin: 22px 0 0; max-width: 40em; }
+  .parties { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
+  .party {
+    flex: 1 1 240px; background: var(--ground); border: 1px solid var(--line);
+    border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow);
+  }
+  .party .role { font-size: 11px; letter-spacing: .14em; color: var(--ink-faint); font-weight: 700; text-transform: uppercase; }
+  .party .name { font-family: var(--serif); font-size: 19px; font-weight: 600; margin-top: 6px; }
+  .party .sub { font-size: 13px; color: var(--ink-soft); margin-top: 3px; }
+  .party.to { border-color: color-mix(in srgb, var(--teal) 35%, var(--line)); }
+  .party.to .arrow { color: var(--teal); font-weight: 700; }
+
+  /* ---------- Section scaffolding ---------- */
+  section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: 0; }
+  .sec-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px; }
+  .sec-num {
+    font-family: var(--serif); font-size: 15px; font-weight: 600;
+    color: var(--ground); background: var(--teal);
+    width: 38px; height: 38px; flex: 0 0 38px;
+    display: grid; place-items: center; border-radius: 10px;
+    font-variant-numeric: tabular-nums; box-shadow: var(--shadow); transform: translateY(-2px);
+  }
+  .sec-head h2 {
+    font-family: var(--serif); font-size: clamp(21px, 3.4vw, 27px);
+    font-weight: 600; margin: 0; line-height: 1.4; text-wrap: balance;
+  }
+  .sec-head .en { display: block; font-family: var(--gothic); font-size: 11px; letter-spacing: .18em; color: var(--teal); font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
+  p { margin: 0 0 16px; }
+  p.big { font-size: 17px; }
+  strong { color: var(--ink); font-weight: 700; }
+  .hi { color: var(--teal-deep); font-weight: 700; }
+  .muted { color: var(--ink-soft); }
+
+  /* ---------- Company profile ---------- */
+  .profile { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  .company-card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; }
+  .company-card dl { margin: 0; display: grid; grid-template-columns: 116px 1fr; row-gap: 10px; column-gap: 12px; }
+  .company-card dt { font-size: 12px; font-weight: 700; color: var(--teal-deep); letter-spacing: .04em; }
+  .company-card dd { margin: 0; font-size: 14px; color: var(--ink-soft); }
+  .vision { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--line); font-family: var(--serif); font-size: 16px; color: var(--ink); }
+
+  .lecturer { display: grid; grid-template-columns: 88px 1fr; gap: 20px; align-items: center; background: var(--ground); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; box-shadow: var(--shadow); }
+  .lecturer .avatar { width: 88px; height: 88px; border-radius: 50%; background: linear-gradient(140deg, var(--teal), var(--teal-bright)); display: grid; place-items: center; color: #fff; font-family: var(--serif); font-size: 34px; font-weight: 600; box-shadow: var(--shadow); }
+  .lecturer .l-role { font-size: 11px; letter-spacing: .12em; font-weight: 700; color: var(--teal); text-transform: uppercase; }
+  .lecturer .l-name { font-family: var(--serif); font-size: 22px; font-weight: 600; margin: 3px 0 2px; }
+  .lecturer .l-name span { font-size: 13px; color: var(--ink-faint); font-family: var(--gothic); margin-left: 8px; }
+  .lecturer .l-desc { font-size: 13.5px; color: var(--ink-soft); margin: 6px 0 0; }
+  .l-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+  .l-tag { font-size: 11.5px; font-weight: 700; color: var(--teal-deep); background: var(--teal-wash); border-radius: 999px; padding: 4px 11px; }
+
+  /* ---------- Programs ---------- */
+  .prog-group { margin-top: 22px; }
+  .prog-group + .prog-group { margin-top: 26px; }
+  .prog-label { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; color: var(--teal-deep); margin-bottom: 14px; }
+  .prog-label .tag { font-size: 10.5px; letter-spacing: .1em; color: var(--gold); background: var(--gold-wash); padding: 3px 9px; border-radius: 6px; text-transform: uppercase; }
+  .prog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .prog {
+    background: var(--ground); border: 1px solid var(--line); border-radius: 13px;
+    padding: 16px 18px; position: relative;
+  }
+  .prog::before { content: ""; position: absolute; left: 0; top: 14px; bottom: 14px; width: 3px; border-radius: 3px; background: var(--teal); }
+  .prog.core { background: var(--teal-wash); border-color: color-mix(in srgb, var(--teal) 30%, var(--line)); }
+  .prog h4 { font-size: 15px; font-weight: 700; margin: 0 0 5px; line-height: 1.5; padding-left: 4px; }
+  .prog h4 .pill { font-size: 10px; font-weight: 700; color: var(--ground); background: var(--gold); border-radius: 5px; padding: 2px 7px; margin-left: 6px; vertical-align: middle; letter-spacing: .04em; }
+  .prog p { font-size: 13px; color: var(--ink-soft); margin: 0; padding-left: 4px; }
+  .prog .freq { display: inline-block; margin-top: 8px; margin-left: 4px; font-size: 11.5px; font-weight: 700; color: var(--teal-deep); }
+
+  /* ---------- Stats / track record ---------- */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 6px 0 26px; }
+  .stat { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px 14px; text-align: center; }
+  .stat .figure { font-family: var(--serif); font-size: 30px; font-weight: 600; color: var(--teal); line-height: 1; font-variant-numeric: tabular-nums; }
+  .stat .figure .unit { font-size: 14px; margin-left: 2px; color: var(--ink); }
+  .stat .label { font-size: 11.5px; color: var(--ink-soft); margin-top: 9px; letter-spacing: .01em; line-height: 1.5; }
+
+  .partners { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .partner { background: var(--ground); border: 1px solid var(--line); border-radius: 13px; padding: 18px 18px; box-shadow: var(--shadow); }
+  .partner .p-ttl { font-size: 14px; font-weight: 700; color: var(--teal-deep); margin-bottom: 6px; }
+  .partner .p-txt { font-size: 12.5px; color: var(--ink-soft); }
+
+  /* ---------- Merit cards ---------- */
+  .merits { display: grid; gap: 16px; }
+  .merit { display: grid; grid-template-columns: 46px 1fr; gap: 18px; background: var(--ground); border: 1px solid var(--line); border-radius: 16px; padding: 24px 24px 24px 22px; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+  .merit::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(var(--teal), var(--teal-bright)); }
+  .merit .mnum { font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--teal); font-variant-numeric: tabular-nums; padding-left: 6px; }
+  .merit h3 { font-size: 17px; margin: 2px 0 8px; font-weight: 700; line-height: 1.5; }
+  .merit p { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
+
+  /* ---------- Case study ---------- */
+  .case { background: var(--panel-2); border: 1px solid var(--line); border-radius: 18px; padding: 8px; box-shadow: var(--shadow); }
+  .case-inner { background: var(--ground); border-radius: 12px; padding: 26px; border: 1px solid var(--line); }
+  .case-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: .06em; color: var(--gold); background: var(--gold-wash); border-radius: 999px; padding: 6px 13px; }
+  .case h3 { font-family: var(--serif); font-size: 21px; font-weight: 600; margin: 16px 0 4px; }
+  .field-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 20px; }
+  .field { border: 1px dashed color-mix(in srgb, var(--gold) 55%, var(--line)); border-radius: 11px; padding: 14px 16px; background: color-mix(in srgb, var(--gold-wash) 40%, transparent); }
+  .field.full { grid-column: 1 / -1; }
+  .field .k { font-size: 11px; letter-spacing: .1em; font-weight: 700; color: var(--gold); text-transform: uppercase; }
+  .field .v { font-size: 14px; color: var(--ink-soft); margin-top: 6px; }
+  .field .v .ph { color: var(--ink-faint); font-style: normal; }
+  .fill-note { display: flex; gap: 10px; align-items: flex-start; margin-top: 20px; font-size: 12.5px; color: var(--ink-soft); background: var(--panel); border-radius: 10px; padding: 12px 14px; }
+  .fill-note .pen { color: var(--gold); font-weight: 700; flex: 0 0 auto; }
+
+  /* ---------- Voices ---------- */
+  .voices { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .voice {
+    background: var(--ground); border: 1px solid var(--line); border-radius: 15px;
+    padding: 22px 22px 20px; box-shadow: var(--shadow); position: relative;
+  }
+  .voice .qmark { font-family: var(--serif); font-size: 40px; line-height: 1; color: var(--teal-wash); position: absolute; top: 14px; right: 18px; }
+  .voice p { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 14px; position: relative; z-index: 1; }
+  .voice .who { display: flex; align-items: center; gap: 10px; border-top: 1px dashed var(--line); padding-top: 12px; }
+  .voice .who .ic { width: 28px; height: 28px; border-radius: 50%; background: var(--teal-wash); color: var(--teal-deep); display: grid; place-items: center; font-size: 13px; font-weight: 700; flex: 0 0 auto; }
+  .voice .who .txt { font-size: 12px; font-weight: 700; color: var(--ink); }
+  .voice .who .txt span { display: block; font-weight: 400; color: var(--ink-faint); font-size: 11px; margin-top: 1px; }
+  .voice-note { margin-top: 16px; font-size: 12px; color: var(--ink-faint); }
+
+  /* ---------- Implementation spec ---------- */
+  .spec { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+  .spec-row { display: grid; grid-template-columns: 148px 1fr; }
+  .spec-row + .spec-row { border-top: 1px solid var(--line); }
+  .spec-row .k { background: var(--panel); padding: 16px 20px; font-weight: 700; font-size: 14px; color: var(--teal-deep); border-right: 1px solid var(--line); }
+  .spec-row .v { padding: 16px 20px; font-size: 14.5px; color: var(--ink-soft); }
+  .spec-row .v strong { color: var(--ink); }
+  .theme-line { font-family: var(--serif); font-size: 16px; color: var(--ink); font-weight: 600; }
+
+  /* ---------- Flow timeline ---------- */
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 26px; }
+  .flow-step { position: relative; padding: 0 8px; text-align: center; }
+  .flow-step .dot { width: 34px; height: 34px; margin: 0 auto 12px; border-radius: 50%; background: var(--ground); border: 2px solid var(--teal); color: var(--teal-deep); font-family: var(--serif); font-weight: 600; display: grid; place-items: center; font-size: 15px; position: relative; z-index: 1; }
+  .flow-step:not(:last-child)::after { content: ""; position: absolute; top: 17px; left: 50%; width: 100%; height: 2px; background: var(--line); z-index: 0; }
+  .flow-step .s-ttl { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+  .flow-step .s-txt { font-size: 11.5px; color: var(--ink-soft); line-height: 1.5; }
+
+  /* ---------- Closing ---------- */
+  .closing { background: linear-gradient(135deg, var(--teal-deep), var(--teal)); color: #eafaf7; border-radius: 20px; padding: 46px 40px; text-align: center; box-shadow: var(--shadow-lift); position: relative; overflow: hidden; }
+  .closing::after { content: ""; position: absolute; inset: 0; background: radial-gradient(80% 60% at 50% 0%, rgba(255,255,255,.14), transparent 60%); pointer-events: none; }
+  .closing h2 { font-family: var(--serif); font-size: clamp(21px, 3.6vw, 27px); font-weight: 600; margin: 0 0 14px; color: #fff; }
+  .closing p { color: #d3f0eb; max-width: 34em; margin: 0 auto 8px; font-size: 15px; }
+  .sign { margin-top: 26px; font-family: var(--serif); font-size: 18px; color: #fff; letter-spacing: .04em; }
+  .sign .small { display: block; font-family: var(--gothic); font-size: 12px; color: #bfe6df; letter-spacing: .1em; margin-top: 4px; }
+
+  footer { text-align: center; padding: 34px 0 48px; color: var(--ink-faint); font-size: 12px; letter-spacing: .04em; }
+
+  @media (max-width: 680px) {
+    .stats { grid-template-columns: 1fr 1fr; }
+    .prog-grid { grid-template-columns: 1fr; }
+    .partners { grid-template-columns: 1fr; }
+    .field-grid { grid-template-columns: 1fr; }
+    .voices { grid-template-columns: 1fr; }
+    .spec-row { grid-template-columns: 104px 1fr; }
+    .merit { grid-template-columns: 36px 1fr; gap: 12px; }
+    .closing { padding: 36px 24px; }
+    .lecturer { grid-template-columns: 1fr; text-align: center; }
+    .lecturer .avatar { margin: 0 auto; }
+    .l-tags { justify-content: center; }
+    .flow { grid-template-columns: 1fr 1fr; gap: 20px 0; }
+    .flow-step:not(:last-child)::after { display: none; }
+  }
+</style>
+
+<header class="cover">
+  <div class="wrap">
+    <span class="doc-kicker"><span class="dot"></span>企画提案書</span>
+    <h1>足柄上商工会様向け<br><span class="accent">「お金の勉強会」</span>開催のご提案</h1>
+    <p class="lead">物価高騰と将来不安の時代に、会員企業様の経営支援・従業員様の福利厚生として。知識ゼロから学べる、家族で育つお金の教育プログラムをご提案いたします。</p>
+
+    <div class="parties">
+      <div class="party">
+        <div class="role">ご提案元</div>
+        <div class="name">fulfull株式会社</div>
+        <div class="sub">金融教育・資産形成支援／人材育成事業</div>
+      </div>
+      <div class="party to">
+        <div class="role"><span class="arrow">▶</span>&nbsp;ご提案先</div>
+        <div class="name">足柄上商工会 御中</div>
+        <div class="sub">会員企業の経営者様・従業員様へ</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">1</span>
+      <h2><span class="en">Background</span>ご提案の背景</h2>
+    </div>
+    <p class="big">昨今、物価高騰や将来への不安から、経営者様ならびに従業員様の<strong>「お金に対する不安」</strong>が年々増加しております。</p>
+    <p>本企画書では、商工会会員様の<span class="hi">経営支援・福利厚生（従業員支援）の一環</span>としてご活用いただける「お金の増やし方勉強会」をご提案申し上げます。正しい金融知識を身につけることで、会員企業とその従業員の皆様の経済的な不安を解消し、より豊かな生活基盤を構築するサポートをいたします。</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">2</span>
+      <h2><span class="en">About us</span>fulfull株式会社について</h2>
+    </div>
+    <div class="profile">
+      <div class="company-card">
+        <dl>
+          <dt>会社名</dt><dd>fulfull株式会社</dd>
+          <dt>代表者</dt><dd>代表取締役　森川 満章（もりかわ みちあき）</dd>
+          <dt>所在地</dt><dd>神奈川県横浜市</dd>
+          <dt>創業・設立</dt><dd>2020年6月</dd>
+          <dt>事業内容</dt><dd>金融教育・資産形成支援事業／個別相談・ライフプラン設計／起業・副業に挑戦する方への伴走型コンサルティング／人材育成研修</dd>
+        </dl>
+        <div class="vision">「日本中に“子どもにとってかっこいい親”を増やす」――資産形成は、誰にでも再現可能な“生きるスキル”です。</div>
+      </div>
+
+      <div class="lecturer">
+        <div class="avatar">森</div>
+        <div>
+          <div class="l-role">講師｜代表取締役</div>
+          <div class="l-name">森川 満章<span>投資の先生</span></div>
+          <p class="l-desc">岩手県出身・4人兄弟の長男。営業職を経て資産形成の世界へ。「難しいお金の話を、誰にでも再現できる形で」届けることをモットーに、全国で講師・アドバイザーとして活動。<strong>ビジネスお助け隊 役員／創業塾 役員</strong>として、地域の創業・経営支援にも携わる。</p>
+          <div class="l-tags">
+            <span class="l-tag">ビジネスお助け隊 役員</span>
+            <span class="l-tag">創業塾 役員</span>
+            <span class="l-tag">Voicy「ふるふるラジオ」再生65万回超</span>
+            <span class="l-tag">受講者累計2,000名超</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">3</span>
+      <h2><span class="en">Programs</span>ご提供可能なプログラム</h2>
+    </div>
+    <p>本企画の中心となる「お金の勉強会」に加え、弊社は<span class="hi">経営支援・人材育成の分野でも豊富な登壇実績</span>を有しております。商工会様の事業目的に合わせて、以下のプログラムを柔軟に組み合わせてご提供できます。</p>
+
+    <div class="prog-group">
+      <div class="prog-label"><span class="tag">Field A</span>お金・資産形成の学び（福利厚生・生活支援）</div>
+      <div class="prog-grid">
+        <div class="prog core">
+          <h4>お金の勉強会（マネーセミナー）<span class="pill">本企画</span></h4>
+          <p>人生100年時代の備え方を、新NISA・iDeCo・保険などから知識ゼロで学ぶ、家族で学べる勉強会。</p>
+        </div>
+        <div class="prog">
+          <h4>従業員向けマネーセミナー</h4>
+          <p>企業の福利厚生・研修として、従業員様のお金の不安に応える出張セミナー。</p>
+          <span class="freq">年間 5〜10 件の開催実績</span>
+        </div>
+        <div class="prog">
+          <h4>個人向けマネーセミナー（オンライン）</h4>
+          <p>全国どこからでも参加できるオンライン形式。継続的に高い需要をいただいています。</p>
+          <span class="freq">年間 約 200 本 を開催</span>
+        </div>
+        <div class="prog">
+          <h4>個別相談・ライフプラン設計</h4>
+          <p>約30分・無料の相談会で、ご家庭ごとの“あなたの正解”を一緒に整理します。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prog-group">
+      <div class="prog-label"><span class="tag">Field B</span>経営支援・人材育成（会員企業の成長支援）</div>
+      <div class="prog-grid">
+        <div class="prog">
+          <h4>創業塾（役員）</h4>
+          <p>これから起業したい方に向けた実践講座。運営を担う役員として、5年にわたり携わっています。</p>
+          <span class="freq">起業希望者向け／役員・登壇歴5年</span>
+        </div>
+        <div class="prog">
+          <h4>リーダー育成塾／コミュニケーション講座</h4>
+          <p>チームをまとめる次世代リーダーに必要な、対話力・関係構築の技術を育てます。</p>
+        </div>
+        <div class="prog">
+          <h4>リーダーシップ・マインド講座</h4>
+          <p>約20社の企業から将来のリーダー候補社員をお預かりし、半年間かけて育成する研修プログラム。</p>
+          <span class="freq">20社規模／半年間の継続育成</span>
+        </div>
+        <div class="prog">
+          <h4>SNSマーケティング講座</h4>
+          <p>集客・情報発信に課題を持つ事業者向けに、SNS活用の実践ノウハウを提供。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">4</span>
+      <h2><span class="en">Track record</span>実績と、信頼の数字</h2>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="figure">2,000<span class="unit">名超</span></div><div class="label">累計受講者数</div></div>
+      <div class="stat"><div class="figure">200<span class="unit">本/年</span></div><div class="label">個人向けマネー<br>セミナー（オンライン）</div></div>
+      <div class="stat"><div class="figure">役員<span class="unit"></span></div><div class="label">ビジネスお助け隊<br>／創業塾 役員</div></div>
+      <div class="stat"><div class="figure">65<span class="unit">万回超</span></div><div class="label">Voicy番組<br>累計再生数</div></div>
+    </div>
+
+    <p style="margin-top:6px;">また、公的団体・教育機関・メディア企業など、多様なパートナーとの連携実績がございます。</p>
+    <div class="partners">
+      <div class="partner">
+        <div class="p-ttl">商工会議所との連携</div>
+        <div class="p-txt">起業塾・ビジネスアドバイザーとしてセミナーを共催。公的団体での登壇に慣れています。</div>
+      </div>
+      <div class="partner">
+        <div class="p-ttl">教育機関とのタイアップ</div>
+        <div class="p-txt">親子プログラミング大会、キッズマネースクールなど、次世代教育のプログラムを展開。</div>
+      </div>
+      <div class="partner">
+        <div class="p-ttl">メディア企業との連携</div>
+        <div class="p-txt">SNSを活用したライブ配信イベントや広告プロモーションを共同で実施。</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">5</span>
+      <h2><span class="en">Benefits</span>会員企業様にとってのメリット</h2>
+    </div>
+    <p>商工会様が主催となり本勉強会を開催することで、会員企業様に以下のメリットをご提供できます。</p>
+    <div class="merits">
+      <div class="merit">
+        <div class="mnum">①</div>
+        <div>
+          <h3>従業員様の定着率向上・福利厚生としての機能</h3>
+          <p>従業員様がお金の不安から解放されることで、仕事への集中力やエンゲージメント（会社への愛着）の向上が期待できます。実質的な福利厚生として機能し、人材の定着・採用力強化に直結します。</p>
+        </div>
+      </div>
+      <div class="merit">
+        <div class="mnum">②</div>
+        <div>
+          <h3>経営者様・従業員様のご家庭を含めた生活基盤の安定</h3>
+          <p>「家族で学べる」をコンセプトに、各ご家庭での実践的な資産形成（5万円から始められる方法など）を基礎から学べます。結果として、地域全体の生活水準の安定化に寄与します。</p>
+        </div>
+      </div>
+      <div class="merit">
+        <div class="mnum">③</div>
+        <div>
+          <h3>すぐに実践できるノウハウの提供</h3>
+          <p>「お金を増やす3箇条」など、明日からすぐに取り組める具体策をお伝えします。受講者の満足度が高く、商工会の支援事業としての価値を即座にご実感いただける内容です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">6</span>
+      <h2><span class="en">Case study</span>導入実績・事例</h2>
+    </div>
+    <p>商工会議所様等の公的団体においても、既に開催実績があり、高い評価をいただいております。</p>
+    <div class="case">
+      <div class="case-inner">
+        <span class="case-badge">◆ 開催事例</span>
+        <h3>八王子商工会議所様</h3>
+        <p style="margin:0;color:var(--ink-soft);font-size:14px;">会員企業の経営者・従業員様を対象に開催。以下の実績値は、お手元の資料より数値をご記入ください。</p>
+        <div class="field-grid">
+          <div class="field"><div class="k">開催時期</div><div class="v"><span class="ph">［ 202X年 X月 ］</span></div></div>
+          <div class="field"><div class="k">参加者数</div><div class="v"><span class="ph">［ 約 〇〇 名 ］</span></div></div>
+          <div class="field full"><div class="k">実施セミナータイトル</div><div class="v"><span class="ph">［ 実際のセミナータイトルをご記入ください ］</span></div></div>
+          <div class="field full"><div class="k">開催の背景</div><div class="v"><span class="ph">例）会員企業から、従業員向けのお金に関する研修要望が増加していたため 等</span></div></div>
+          <div class="field full"><div class="k">成果・反響</div><div class="v"><span class="ph">例）アンケート満足度 〇〇％。「自社だけでは伝えにくい内容を専門家から聞けて良かった」等の声</span></div></div>
+          <div class="field full"><div class="k">その後の展開</div><div class="v"><span class="ph">例）受講後、〇社から自社内での単独開催の要望があり、具体的な支援に繋がった 等</span></div></div>
+        </div>
+        <div class="fill-note">
+          <span class="pen">✎ 記入のヒント</span>
+          <span>「当時のアンケート結果（グラフ）」「参加者のリアルな声（年代・役職入り）」「当日の様子の写真」を挿入すると、先方が具体的なイメージを持ちやすく、非常に効果的です。前例を重視される先方には、この事例の解像度の高さが決め手になります。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">7</span>
+      <h2><span class="en">Voices</span>参加者・ご相談者の声</h2>
+    </div>
+    <p>勉強会やスクールで継続的に学ばれている受講生の方から、たくさんの嬉しいお声をいただいています。</p>
+    <div class="voices">
+      <div class="voice">
+        <span class="qmark">&ldquo;</span>
+        <p>知識を得たことで、自分の不安がどこからくるものか分かりました。今は家族全員で、夢に向かって資産形成する意識が高まっています。</p>
+        <div class="who"><span class="ic">50</span><span class="txt">50代・女性<span>個人事業主</span></span></div>
+      </div>
+      <div class="voice">
+        <span class="qmark">&ldquo;</span>
+        <p>教育費と老後資金への漠然とした不安で、一人では前に進めませんでした。今は「相談できる」「方向性を確認できる」環境があり、安心して一歩ずつ進めています。「背中を見せる親になろう」という言葉が支えです。</p>
+        <div class="who"><span class="ic">50</span><span class="txt">50代・男性<span>会社員／お子さま3人</span></span></div>
+      </div>
+      <div class="voice">
+        <span class="qmark">&ldquo;</span>
+        <p>家計をしっかり考えるきっかけになり、夫とも将来を見据えて話せて、協力してもらえるようになりました。1レッスンが程よい長さで、隙間時間にサクッと学べます。</p>
+        <div class="who"><span class="ic">30</span><span class="txt">30代・女性<span>薬剤師</span></span></div>
+      </div>
+      <div class="voice">
+        <span class="qmark">&ldquo;</span>
+        <p>今からの旅行などにお金を使う楽しみも増え、気持ちに余裕ができました。いつでも相談できて、仲間がいることが何より心強いです。</p>
+        <div class="who"><span class="ic">60</span><span class="txt">60代・女性<span>飲食業</span></span></div>
+      </div>
+      <div class="voice">
+        <span class="qmark">&ldquo;</span>
+        <p>お金への不安がなくなり、「自分にもできる」という自信がつきました。自分らしい生き方の選択ができるようになり、心が何より豊かになりました。</p>
+        <div class="who"><span class="ic">50</span><span class="txt">50代・女性<span>ヨガインストラクター</span></span></div>
+      </div>
+      <div class="voice">
+        <span class="qmark">&ldquo;</span>
+        <p>漠然とした将来への不安が、未来へのワクワクに変わりました。ベテランから初心者まで、一人ひとりの歩幅に合わせて伴走してくださる環境です。</p>
+        <div class="who"><span class="ic">40</span><span class="txt">40代・女性<span>金融業</span></span></div>
+      </div>
+    </div>
+    <p class="voice-note">※ 当スクール受講生アンケートより、ご本人の許諾のうえ匿名で掲載しています。</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">8</span>
+      <h2><span class="en">Proposal</span>足柄上商工会様へのご提案</h2>
+    </div>
+    <p>八王子商工会議所様での成功事例をベースに、足柄上商工会様向けに以下の内容でご提案いたします。</p>
+    <div class="spec">
+      <div class="spec-row">
+        <div class="k">テーマ案</div>
+        <div class="v"><span class="theme-line">家族で学べる「お金の増やし方勉強会」</span><br>〜子どもに胸を張れる、かっこいい親になるために〜</div>
+      </div>
+      <div class="spec-row"><div class="k">対象者</div><div class="v">会員企業の<strong>経営者様</strong>、<strong>従業員様</strong></div></div>
+      <div class="spec-row"><div class="k">開催形式</div><div class="v">対面形式（商工会館 等）または<strong>オンライン</strong></div></div>
+      <div class="spec-row"><div class="k">講師</div><div class="v">fulfull株式会社 代表取締役 <strong>森川 満章</strong>（ビジネスお助け隊 役員／創業塾 役員）他</div></div>
+      <div class="spec-row"><div class="k">運営体制</div><div class="v">事前の企画から当日の運営サポートまで、<strong>弊社にて全面的にバックアップ</strong>いたします。</div></div>
+      <div class="spec-row"><div class="k">費用</div><div class="v"><strong>ご予算に応じて調整可能</strong>です。開催規模・形式・回数に合わせてお見積りいたしますので、お気軽にご相談ください。</div></div>
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:18px;font-weight:600;margin:34px 0 0;">開催までの流れ</h3>
+    <div class="flow">
+      <div class="flow-step"><div class="dot">1</div><div class="s-ttl">お問い合わせ</div><div class="s-txt">まずはお気軽にご連絡ください</div></div>
+      <div class="flow-step"><div class="dot">2</div><div class="s-ttl">ヒアリング・企画</div><div class="s-txt">対象者・ねらいに合わせて内容を設計</div></div>
+      <div class="flow-step"><div class="dot">3</div><div class="s-ttl">日程調整・告知</div><div class="s-txt">開催日を決定し、会員様へご案内</div></div>
+      <div class="flow-step"><div class="dot">4</div><div class="s-ttl">当日開催</div><div class="s-txt">講師が登壇。運営も弊社が伴走</div></div>
+      <div class="flow-step"><div class="dot">5</div><div class="s-ttl">アフターフォロー</div><div class="s-txt">希望者に無料個別相談をご用意</div></div>
+    </div>
+  </section>
+
+  <section style="border-bottom:0;">
+    <div class="closing">
+      <h2>ぜひ、前向きなご検討を<br>お願い申し上げます。</h2>
+      <p>会員様の満足度向上に大きく貢献できると確信しております。詳細のご相談・お見積りなど、どうぞお気軽にお申し付けくださいませ。</p>
+      <div class="sign">fulfull株式会社<span class="small">金融教育・資産形成支援／人材育成事業</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  fulfull株式会社 ｜ 足柄上商工会様向け「お金の勉強会」開催のご提案（企画書たたき台 rev.5）
+</footer>
